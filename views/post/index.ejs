@@ -1,0 +1,38 @@
+<%- include('../includes/header'); %>
+
+<div class="container">
+  <h2 class="mb-4">All Menu</h2>
+
+  <a href="/posts/create">
+    <button class="btn btn-primary">Tambah Menu</button>
+  </a>
+
+  <table class="table mt-4">
+    <thead class="table-primary text-center">
+      <tr>
+        <th>#</th>
+        <th>Nama Menu</th>
+        <th>Stok</th>
+        <th>Harga</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody class="text-center">
+      <% posts.forEach((post, index) => { %>
+      <tr>
+        <td><%= ++index %></td>
+        <td class="text-start"><%= post.namaMenu %></td>
+        <td><%= post.stok %></td>
+        <td><%= post.harga %></td>
+        <td>
+          <a class="btn btn-success" href="/posts/<%= post.id %>" role="button">Details</a>
+          <a class="btn btn-primary mx-1" href="#" role="button">Edit</a>
+          <a class="btn btn-danger" href="#" role="button">Delete</a>
+        </td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</div>
+
+<%- include('../includes/footer'); %>
