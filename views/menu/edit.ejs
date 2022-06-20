@@ -3,7 +3,7 @@
 <div class="container">
   <h2>Edit Menu</h2>
 
-  <form action="/posts/<%= post.id %>/update" method="POST">
+  <form action="/menus/<%= menu.id %>/update" method="POST">
     <div class="mb-3">
       <label for="namaMenu" class="form-label">Nama Menu</label>
       <input
@@ -11,7 +11,7 @@
         class="form-control"
         id="namaMenu"
         name="namaMenu"
-        value="<%= post.namaMenu %>"
+        value="<%= menu.namaMenu %>"
       />
     </div>
     <div class="mb-3">
@@ -21,7 +21,7 @@
       class="form-control"
       id="stok"
       name="stok"
-      value="<%= post.stok  %>"
+      value="<%= menu.stok  %>"
       />
     </div>
 
@@ -32,7 +32,7 @@
         class="form-control"
         id="harga"
         name="harga"
-        value="<%= post.harga %> "
+        value="<%= menu.harga %> "
         >
       </div>
     <button type="submit" class="btn btn-primary">Submit</button>

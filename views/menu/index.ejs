@@ -3,7 +3,7 @@
 <div class="container">
   <h2 class="mb-4">All Menu</h2>
 
-  <a href="/posts/create">
+  <a href="/menus/create">
     <button class="btn btn-primary">Tambah Menu</button>
   </a>
 
@@ -18,16 +18,16 @@
       </tr>
     </thead>
     <tbody class="text-center">
-      <% posts.forEach((post, index) => { %>
+      <% menus.forEach((menu, index) => { %>
       <tr>
         <td><%= ++index %></td>
-        <td class="text-start"><%= post.namaMenu %></td>
-        <td><%= post.stok %></td>
-        <td><%= post.harga %></td>
+        <td class="text-start"><%= menu.namaMenu %></td>
+        <td><%= menu.stok %></td>
+        <td><%= menu.harga %></td>
         <td>
-          <a class="btn btn-success" href="/posts/<%= post.id %>" role="button">Details</a>
-          <a class="btn btn-primary mx-1" href="/posts/<%= post.id %>/edit" role="button">Edit</a>
-          <a class="btn btn-danger" href="/posts/<%= post.id %>/delete" role="button">Delete</a>
+          <a class="btn btn-success" href="/menus/<%= menu.id %>" role="button">Details</a>
+          <a class="btn btn-primary mx-1" href="/menus/<%= menu.id %>/edit" role="button">Edit</a>
+          <a class="btn btn-danger" href="/menus/<%= menu.id %>/delete" role="button">Delete</a>
         </td>
       </tr>
       <% }); %>

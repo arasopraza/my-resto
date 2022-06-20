@@ -1,7 +1,7 @@
 const { DataTypes } = require("sequelize");
 const db = require("../database");
 
-const Post = db.define("Post", {
+const Menu = db.define("Menu", {
   id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
@@ -12,4 +12,4 @@ const Post = db.define("Post", {
   harga: DataTypes.INTEGER(155),
 });
 
-module.exports = Post;
+module.exports = Menu;
