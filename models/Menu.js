@@ -1,15 +1,16 @@
-const { DataTypes } = require("sequelize");
-const db = require("../database");
+const { DataTypes } = require('sequelize');
+const db = require('../database');
 
-const Menu = db.define("Menu", {
+const Menu = db.define('Menu', {
   id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
     primaryKey: true,
   },
-  namaMenu: DataTypes.STRING(150),
-  stok: DataTypes.INTEGER(155),
-  harga: DataTypes.INTEGER(155),
+  nama: DataTypes.STRING(150),
+  imageUrl: DataTypes.STRING(150),
+  stok: DataTypes.INTEGER(3),
+  harga: DataTypes.INTEGER(7),
 });
 
 module.exports = Menu;

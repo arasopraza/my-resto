@@ -21,13 +21,25 @@
       <% menus.forEach((menu, index) => { %>
       <tr>
         <td><%= ++index %></td>
-        <td class="text-start"><%= menu.namaMenu %></td>
+        <td class="text-start"><%= menu.nama %></td>
         <td><%= menu.stok %></td>
         <td><%= menu.harga %></td>
         <td>
-          <a class="btn btn-success" href="/menus/<%= menu.id %>" role="button">Details</a>
-          <a class="btn btn-primary mx-1" href="/menus/<%= menu.id %>/edit" role="button">Edit</a>
-          <a class="btn btn-danger" href="/menus/<%= menu.id %>/delete" role="button">Delete</a>
+          <a class="btn btn-success" href="/menus/<%= menu.id %>" role="button"
+            >Details</a
+          >
+          <a
+            class="btn btn-primary mx-1"
+            href="/menus/<%= menu.id %>/edit"
+            role="button"
+            >Edit</a
+          >
+          <a
+            class="btn btn-danger"
+            href="/menus/<%= menu.id %>/delete"
+            role="button"
+            >Delete</a
+          >
         </td>
       </tr>
       <% }); %>

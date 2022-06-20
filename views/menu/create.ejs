@@ -5,16 +5,20 @@
 
   <form action="/menus/store" method="POST">
     <div class="mb-3">
-      <label for="title" class="form-label">Nama Menu</label>
-      <input type="text" class="form-control" id="namaMenu" name="namaMenu" />
+      <label for="nama" class="form-label">Nama Menu</label>
+      <input type="text" class="form-control" id="nama" name="nama" />
     </div>
     <div class="mb-3">
-      <label for="title" class="form-label">Stok</label>
-      <input type="text" class="form-control" id="stok" name="stok" />
+      <label for="imageUrl" class="form-label">URL Foto Makanan</label>
+      <input type="text" class="form-control" id="imageUrl" name="imageUrl" />
     </div>
     <div class="mb-3">
-      <label for="title" class="form-label">Harga</label>
-      <input type="text" class="form-control" id="harga" name="harga" />
+      <label for="stok" class="form-label">Stok</label>
+      <input type="number" class="form-control" id="stok" name="stok" />
+    </div>
+    <div class="mb-3">
+      <label for="harga" class="form-label">Harga</label>
+      <input type="number" class="form-control" id="harga" name="harga" />
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>

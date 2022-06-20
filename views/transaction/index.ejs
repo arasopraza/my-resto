@@ -1,0 +1,42 @@
+<%- include('../includes/header'); %>
+
+<div class="container">
+  <h2 class="mb-4">All Transactions</h2>
+
+  <!-- <a href="/menus/create">
+    <button class="btn btn-primary">Tambah Menu</button>
+  </a> -->
+  <table class="table mt-4">
+    <thead class="table-primary text-center">
+      <tr>
+        <th>#</th>
+        <th>Nama Pembeli</th>
+        <th>Alamat Pembeli</th>
+        <th>Menu</th>
+        <th>Harga</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody class="text-center">
+      <% transactions.forEach((transaction, index) => { %>
+      <tr>
+        <td><%= ++index %></td>
+        <td><%= transaction.nama %></td>
+        <td><%= transaction.alamat %></td>
+        <td><%= transaction.Menu.nama %></td>
+        <td><%= transaction.Menu.harga %></td>
+        <td>
+          <a
+            class="btn btn-danger"
+            href="/transactions/<%= transaction.id %>/delete"
+            role="button"
+            >Delete</a
+          >
+        </td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</div>
+
+<%- include('../includes/footer'); %>

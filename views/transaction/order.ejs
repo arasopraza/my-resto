@@ -1,0 +1,21 @@
+<%- include('../includes/header'); %>
+
+<div class="container">
+  <h2 class="mb-4">All Menu</h2>
+  <div class="row">
+    <% menus.forEach((menu, index) => { %>
+    <div class="col-3 mb-4">
+      <div class="card">
+        <img src="<%= menu.imageUrl %>" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Rp <%= menu.harga %></h5>
+          <p class="card-text"><%= menu.nama %></p>
+          <a href="/order/<%= menu.id %>" class="btn btn-primary">Pesan</a>
+        </div>
+      </div>
+    </div>
+    <% }); %>
+  </div>
+</div>
+
+<%- include('../includes/footer'); %>

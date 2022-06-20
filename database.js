@@ -10,7 +10,7 @@ const db = new Sequelize(
   {
     host: dbConfig.host,
     dialect: 'mysql',
-  }
+  },
 );
 
 module.exports = db;

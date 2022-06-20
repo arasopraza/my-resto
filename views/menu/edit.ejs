@@ -5,36 +5,46 @@
 
   <form action="/menus/<%= menu.id %>/update" method="POST">
     <div class="mb-3">
-      <label for="namaMenu" class="form-label">Nama Menu</label>
+      <label for="nama" class="form-label">Nama Menu</label>
       <input
         type="text"
         class="form-control"
-        id="namaMenu"
-        name="namaMenu"
-        value="<%= menu.namaMenu %>"
+        id="nama"
+        name="nama"
+        value="<%= menu.nama %>"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="imageUrl" class="form-label">Url Foto Makanan</label>
+      <input
+        type="text"
+        class="form-control"
+        id="imageUrl"
+        name="imageUrl"
+        value="<%= menu.imageUrl %>"
       />
     </div>
     <div class="mb-3">
       <label for="stok" class="form-label">Stok</label>
       <input
-      type="text"
-      class="form-control"
-      id="stok"
-      name="stok"
-      value="<%= menu.stok  %>"
+        type="number"
+        class="form-control"
+        id="stok"
+        name="stok"
+        value="<%= menu.stok  %>"
       />
     </div>
 
     <div class="mb-3">
-        <label for="harga" class="form-label">Harga</label>
-        <input
-        type="text"
+      <label for="harga" class="form-label">Harga</label>
+      <input
+        type="number"
         class="form-control"
         id="harga"
         name="harga"
-        value="<%= menu.harga %> "
-        >
-      </div>
+        value="<%= menu.harga %>"
+      />
+    </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 </div>
