@@ -1,0 +1,42 @@
+<%- include('../includes/header'); %>
+
+<div class="container">
+  <h2>Edit Menu</h2>
+
+  <form action="/posts/<%= post.id %>/update" method="POST">
+    <div class="mb-3">
+      <label for="namaMenu" class="form-label">Nama Menu</label>
+      <input
+        type="text"
+        class="form-control"
+        id="namaMenu"
+        name="namaMenu"
+        value="<%= post.namaMenu %>"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="stok" class="form-label">Stok</label>
+      <input
+      type="text"
+      class="form-control"
+      id="stok"
+      name="stok"
+      value="<%= post.stok  %>"
+      />
+    </div>
+
+    <div class="mb-3">
+        <label for="harga" class="form-label">Harga</label>
+        <input
+        type="text"
+        class="form-control"
+        id="harga"
+        name="harga"
+        value="<%= post.harga %> "
+        >
+      </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<%- include('../includes/footer'); %>
